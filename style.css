@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+:root {
+  /* Primary Colors */
+  --green-300: hsl(150, 100%, 66%);
+
+  /* Neutral Colors */
+  --blue-600: hsl(217, 19%, 38%);
+  --blue-900: hsl(217, 19%, 24%);
+  --blue-950: hsl(218, 23%, 16%);
+
+  /* Font Family */
+  --ff-manrope: "Manrope", sans-serif;
+
+  /* Font Weight */
+  --ff-weight: 800;
+
+  /* Font Size */
+  --fs-size: 1.75rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    font-family: var(--ff-manrope);
+    font-weight: var(--ff-weight);
+    font-size: var(--fs-size);
+    background-color: var(--blue-950); 
+}
+.advice-card-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.advice-card{
+    width: clamp(20rem, 90%, 33.75rem);
+    text-align: center;
+    border-radius: 1rem;
+    background-color: var(--blue-900);
+    padding: 2.5rem;
+    color: white;
+    position: relative;
+}
+.advice-id{
+    text-transform: uppercase;
+    font-size: .8rem;
+    color: var(--green-300);
+    letter-spacing: .2rem;
+    margin-block-end: 1.7rem;
+}
+.advice-description {
+    color: white; 
+    font-size: 1.75rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.dice-button{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background-color: var(--green-300);
+    width: 3.9rem;
+    height: 3.9rem;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+}
+.dice-button:hover {
+  box-shadow: 0 0 2rem var(--green-300); 
+}
+.divider {
+  background-image: url('./images/pattern-divider-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 1rem; 
+  width: 100%;
+  margin-block: 1.5rem 2.5rem; 
+}
+
+@media (min-width: 36rem) {
+  .divider {
+    background-image: url('./images/pattern-divider-desktop.svg');
+  }
+}
